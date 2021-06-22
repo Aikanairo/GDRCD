@@ -312,13 +312,13 @@
     <?php
     /********* CHIUSURA SCHEDA **********/
     //Impedisci XSS nella musica
-    $record['url_media'] = gdrcd_filter('fullurl', $record['url_media']);
-    if($PARAMETERS['mode']['allow_audio'] == 'ON' && ! $_SESSION['blocca_media'] && ! empty($record['url_media'])) { ?>
+    $personaggio['url_media'] = gdrcd_filter('fullurl', $personaggio['url_media']);
+    if($PARAMETERS['mode']['allow_audio'] == 'ON' && ! $_SESSION['blocca_media'] && ! empty($personaggio['url_media'])) { ?>
         <audio autoplay>
-            <source src="<?php echo $record['url_media']; ?>" type="audio/mpeg">
+            <source src="<?php echo $personaggio['url_media']; ?>" type="audio/mpeg">
         </audio>
         <!--[if IE9]>
-        <embed src="<?php echo $record['url_media']; ?>" autostart="true" hidden="true"/>
+        <embed src="<?php echo $personaggio['url_media']; ?>" autostart="true" hidden="true"/>
         <![endif]-->
     <?php } ?>
 </div><!-- Pagina -->
